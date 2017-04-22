@@ -1,1 +1,39 @@
-{     "devDependencies": {         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-react-calendar-timeline",     "homepage": "https://github.com/npmtest/node-npmtest-react-calendar-timeline",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-react-calendar-timeline.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### basic test coverage for  [react-calendar-timeline (v0.11.1)](https://github.com/namespace-ee/react-calendar-timeline)  [![npm package](https://img.shields.io/npm/v/npmtest-react-calendar-timeline.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-react-calendar-timeline) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-react-calendar-timeline.svg)](https://travis-ci.org/npmtest/node-npmtest-react-calendar-timeline)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-react-calendar-timeline",
+    "keywords": [
+        "coverage",
+        "test",
+        "react-calendar-timeline"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_react_calendar_timeline.js",
+    "name": "npmtest-react-calendar-timeline",
+    "nameAlias": "npmtest_react_calendar_timeline",
+    "nameOriginal": "npmtest-react-calendar-timeline",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-react-calendar-timeline.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
